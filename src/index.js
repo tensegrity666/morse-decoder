@@ -38,18 +38,13 @@ const MORSE_TABLE = {
 };
 
 function decode(expr) {
-    const length = expr.length % 10;
-
     const morseToNumber = {};
 
-
-    console.log(length);
-    console.log(expr.length);
-    console.log(addition);
-
-
-    console.log(expr);
-}
+    for (let key in MORSE_TABLE) {
+        const number = key.replace(/\-/g, '11').replace(/\./g, '10').padStart(10, '0');
+        morseToNumber[number] = MORSE_TABLE[key];
+    }
+};
 
 module.exports = {
     decode
