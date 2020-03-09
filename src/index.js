@@ -38,7 +38,17 @@ const MORSE_TABLE = {
 };
 
 function decode(expr) {
-    // write your solution here
+    const length = expr.length % 10;
+
+    const morseToNumber = {};
+
+
+    console.log(length);
+    console.log(expr.length);
+    console.log(addition);
+
+
+    console.log(expr);
 }
 
 module.exports = {
